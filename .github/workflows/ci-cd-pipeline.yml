@@ -21,10 +21,10 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm test
+        run: npm run test
 
       - name: Capture test results
-        run: npm test -- --json --outputFile=test-results.json
+        run: npm run test -- --reporter json --reporter-options output=test-results.json
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
